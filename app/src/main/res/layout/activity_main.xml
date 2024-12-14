@@ -48,6 +48,36 @@
             android:hint="Digite o valor total da conta" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+      <RadioButton
+          android:id="@+id/rg_one"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="10%" />
+      <RadioButton
+          android:id="@+id/rg_two"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="15%" />
+      <RadioButton
+          android:id="@+id/rg_three"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="20%" />
+
+    </RadioGroup>
+
+
     <Button
         android:id="@+id/btn_clean"
         android:layout_width="0dp"
@@ -57,7 +87,7 @@
         android:text="Limpar"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
 
     <Button
         android:id="@+id/btn_calculate"
@@ -68,7 +98,7 @@
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
