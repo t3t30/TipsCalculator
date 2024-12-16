@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
            val total = totalconta + (totalconta * percent/100)
            val totalporpessoa = total / totalpessoas
 
-
+                //biding
 
 
        }
