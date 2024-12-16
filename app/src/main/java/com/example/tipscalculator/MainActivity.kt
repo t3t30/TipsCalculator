@@ -49,9 +49,10 @@ class MainActivity : AppCompatActivity() {
            } else{
 
                val totalconta: Float = totalcontatemp.toString().toFloat()
-               val totalpessoas:Int = totalpessoastemp.toString().toInt()
+               val totalpessoas:Float = totalpessoastemp.toString().toFloat()
 
-               val total = totalconta + (totalconta * percent/100)
+               val tip = totalconta * percent/100f
+               val total = tip + totalconta
                val totalporpessoa = total / totalpessoas
 
                binding.txtResult.text= "Valor por pessoa: $totalporpessoa"
