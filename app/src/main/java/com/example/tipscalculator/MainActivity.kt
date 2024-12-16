@@ -21,7 +21,33 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        var percent: Int =0
 
+        binding.rgOne.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked) percent = 10
+        }
+
+        binding.rgTwo.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked) percent = 15
+        }
+
+        binding.rgThree.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) percent = 20
+        }
+
+
+
+       binding.btnCalculate.setOnClickListener{
+           val totalconta: Float = binding.tieconta.text.toString().toFloat()
+           val totalpessoas:Int = binding.tiepessoas.text.toString().toInt()
+
+           val total = totalconta + (totalconta * percent/100)
+           val totalporpessoa = total / totalpessoas
+
+
+
+
+       }
 
     }
 }
