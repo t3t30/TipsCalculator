@@ -40,20 +40,21 @@ class MainActivity : AppCompatActivity() {
 
        binding.btnCalculate.setOnClickListener{
 
-           val totalcontatemp = binding.tieconta.text
-           val totalpessoastemp = binding.tieconta.text
+           val totalcontatemp:String= binding.tieconta.text.toString()
+           val totalpessoastemp:String= binding.tiepessoas.text.toString()
            if (totalcontatemp?.isEmpty() == true || totalpessoastemp?.isEmpty() == true ){
               Snackbar.make(binding.tieconta, "Preencha todos os campos", Snackbar.LENGTH_LONG)
                   .show()
 
            } else{
 
-               val totalconta: Float = totalcontatemp.toString().toFloat()
-               val totalpessoas:Float = totalpessoastemp.toString().toFloat()
+               val totalconta: Float = totalcontatemp.toFloat()
+               val totalpessoas: Float = totalpessoastemp.toFloat()
+               val resultadointeiro= totalpessoas.toInt()
 
                val tip = totalconta * percent/100f
                val total = tip + totalconta
-               val totalporpessoa = total / totalpessoas
+               val totalporpessoa = total / resultadointeiro
 
                binding.txtResult.text= "Valor por pessoa: $totalporpessoa"
 
