@@ -56,6 +56,9 @@
         android:layout_marginEnd="26dp"
         app:boxCornerRadiusBottomStart="36dp"
         app:boxCornerRadiusTopEnd="46dp"
+        android:textColorHint="@color/darkblue"
+        app:boxStrokeColor="@color/darkblue"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
@@ -75,6 +78,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:gravity="start"
+        android:theme="@style/RadioButtonStyle"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/til_pessoas"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,19 +88,22 @@
             android:id="@+id/rg_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%" />
+            android:text="10%"
+            android:theme="@style/RadioButtonStyle"/>
 
         <RadioButton
             android:id="@+id/rg_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%" />
+            android:text="15%"
+            android:theme="@style/RadioButtonStyle"/>
 
         <RadioButton
             android:id="@+id/rg_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%" />
+            android:text="20%"
+            android:theme="@style/RadioButtonStyle"/>
 
     </RadioGroup>
 
@@ -138,6 +145,8 @@
         android:layout_marginEnd="26dp"
         app:boxCornerRadiusBottomStart="36sp"
         app:boxCornerRadiusTopEnd="46sp"
+        android:textColorHint="@color/darkblue"
+        app:boxStrokeColor="@color/darkblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_conta">
@@ -146,6 +155,7 @@
             android:id="@+id/tiepessoas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="Digite o numero de pessoas na mesa:"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -184,6 +194,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textStyle="bold"
+        android:textColor="@color/darkblue"
         android:text="Marque o valor da gorjeta:"
         app:layout_constraintBottom_toTopOf="@+id/rg"
         app:layout_constraintEnd_toEndOf="parent"
