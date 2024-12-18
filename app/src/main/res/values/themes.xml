@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
+ <style name="RadioButtonStyle" parent="Theme.AppCompat.DayNight">
+     <item name="colorAccent">@color/darkblue</item>
+     <item name="android:textColorPrimary">@android:color/darker_gray</item>
+ </style>
     <style name="Theme.TipsCalculator" parent="Base.Theme.TipsCalculator" />
 </resources>
