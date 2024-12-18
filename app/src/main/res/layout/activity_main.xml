@@ -5,16 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#32357A"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/ahora" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="46dp"
         android:text="TipsCalculator"
-        android:textSize="34sp"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +39,9 @@
         android:layout_margin="26dp"
         android:layout_marginTop="16dp"
         android:text="Preencha os campos abaixo para realizar os calculos da sua conta:"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -35,17 +52,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="26dp"
+        app:boxCornerRadiusBottomStart="36dp"
+        app:boxCornerRadiusTopEnd="46dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tieconta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite o valor total da conta"
+            android:hint="Digite o valor total da conta:"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,12 +72,13 @@
         android:id="@+id/rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:gravity="start"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/til_pessoas"
-        app:layout_constraintStart_toStartOf="@+id/til_pessoas"
-        app:layout_constraintTop_toBottomOf="@+id/til_pessoas">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <RadioButton
             android:id="@+id/rg_one"
@@ -81,24 +101,30 @@
     </RadioGroup>
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_clean"
-        android:layout_width="0dp"
+        android:layout_width="141dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="66dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/btn1"
         android:text="Limpar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/til_pessoas"
         app:layout_constraintTop_toBottomOf="@+id/rg" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_calculate"
-        android:layout_width="0dp"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/btn1"
         android:text="Calcular"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/til_pessoas"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/rg" />
@@ -110,6 +136,8 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="26dp"
+        app:boxCornerRadiusBottomStart="36sp"
+        app:boxCornerRadiusTopEnd="46sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_conta">
@@ -118,7 +146,7 @@
             android:id="@+id/tiepessoas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite o numero de pessoas na mesa"
+            android:hint="Digite o numero de pessoas na mesa:"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,11 +162,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        tools:text="56,7"
+        android:textColor="@color/darkblue"
         android:textSize="26sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_clean" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        tools:text="56,7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="195dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:text="Marque o valor da gorjeta:"
+        app:layout_constraintBottom_toTopOf="@+id/rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_pessoas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
